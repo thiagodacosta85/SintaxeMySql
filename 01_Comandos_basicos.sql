@@ -1,0 +1,41 @@
+/*
+	DML	- DATA MANIPULATION LANGUAGE
+	DDL - DATA DEFINITION LANGUAGE
+	DCL - DATA CONTROL LANGUAGE
+	TCL - TRANSACTION CONTROL LANGUAGE
+*/
+
+/* exibir o diretório dos arquivos de db no computador.*/
+show variables like 'datadir';
+
+SHOW DATABASES; /* EXIBE TODOS OS BANCOS NO SERVIDOR */
+
+/* Iniciando Modelagem Física*/
+
+/*CRIANDO BANCO DE DADOS*/
+CREATE DATABASE EXEMPLO;
+
+/*CONECTANDO AO BANCO*/
+USE EXEMPLO;
+
+/*CRIANDO A TABELA CLIENTES*/
+CREATE TABLE CLIENTE (
+	NOME VARCHAR(30),
+	SEXO CHAR(1),
+	EMAIL VARCHAR(30),
+	CPF INT(11),
+	TELEFONE VARCHAR(30),
+	ENDERECO VARCHAR(100)
+);
+
+/*VERIFICANDO TABELAS DO BANCO*/
+SHOW TABLES;
+
+/*DESCOBRINDO A ESTRUTURA DA TABELA*/
+DESC CLIENTE;
+
+TRUNCATE TABLE nome-da-tabela; /*Resetar uma tabela, CUIDADO: vai zerar o auto increment.*/
+DROP TABLE nome-da-tabela; /*Remover uma tabela*/
+DROP DATABASE nome-do-db; /*Remover um DB*/
+
+
